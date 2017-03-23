@@ -369,7 +369,7 @@ void luz()
     else
     {
       digitalWrite(LUZ, HIGH);
-      delay(TEMPO_LUZ * 1000);limite_POT[botao]
+      delay(TEMPO_LUZ * 1000);
       digitalWrite(LUZ, LOW);
     }
     if (DEBUG)
@@ -426,7 +426,7 @@ void ajusteSensibilidade() {                     //A função recebe uma porta a
     value = leitura - limite_POT[i];
     if (value > LIMITE || value < -LIMITE) {
       flag_calibracao[i] = false;
-    } else {limite_POT[botao]
+    } else {
       flag_calibracao[i] = true;
     }
     if (flag_calibracao[i] == false)
@@ -444,7 +444,7 @@ void ajusteSensibilidade() {                     //A função recebe uma porta a
     lcd.clear();
     lcd.setCursor(0, 0);
     lcd.print(str + sensor);
-    lcd.setCursor(0, 1);limite_POT[botao]
+    lcd.setCursor(0, 1);
     lcd.print("Descalibrados");
     delay(4000);
   }
